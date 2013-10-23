@@ -37,5 +37,9 @@ public class Ship : MonoBehaviour {
 		
 	}
 	
+	void OnTriggerEnter(Collider col){
+		Destroy(gameObject);
+	}
+	
 	
 }
