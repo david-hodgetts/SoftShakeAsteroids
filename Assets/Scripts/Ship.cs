@@ -10,6 +10,9 @@ public class Ship : MonoBehaviour {
 	public Rigidbody bulletPrefab;
 	public float bulletForce = 1000;
 	
+	public AudioClip bulletClip;
+	public AudioClip boumClip;
+	
 	// Update is called once per frame
 	void Update () {
 		float rotation = Input.GetAxis("Horizontal") * rotationSpeed * Time.deltaTime;
@@ -35,10 +38,13 @@ public class Ship : MonoBehaviour {
 		
 		bullet.rigidbody.AddForce(transform.forward * bulletForce);
 		
+		AudioSource.PlayClipAtPoint(bulletClip, transform.position);
+		
 	}
 	
 	void OnTriggerEnter(Collider col){
 		Destroy(gameObject);
+		AudioSource.PlayClipAtPoint(boumClip, transform.position);
 	}
 	
 	
