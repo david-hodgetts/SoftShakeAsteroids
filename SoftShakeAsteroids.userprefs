@@ -4,7 +4,7 @@
     <Files>
       <File FileName="Assets/Scripts/Ship.cs" Line="1" Column="1" />
       <File FileName="Assets/Scripts/WrapAround.cs" Line="1" Column="1" />
-      <File FileName="Assets/Scripts/Asteroid.cs" Line="5" Column="34" />
+      <File FileName="Assets/Scripts/Asteroid.cs" Line="33" Column="18" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
