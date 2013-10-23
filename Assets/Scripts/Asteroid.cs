@@ -19,8 +19,11 @@ public class Asteroid : MonoBehaviour {
 	
 	
 	void Update(){
-		if(Input.GetKeyDown(KeyCode.Space))
+		if(Input.GetKeyDown(KeyCode.Space)){
 			Split ();
+			Destroy(gameObject);
+		}
+			
 	}
 	
 	void Split(){
@@ -37,13 +40,16 @@ public class Asteroid : MonoBehaviour {
 			newInstance.transform.localScale *= 0.75f;
 				
 		}
-		
-
-		
-		Destroy (gameObject);
 	}
 	
 	void SetSplitCount(int count){
 		splitCount = count;
+	}
+	
+	void OnTriggerEnter(Collider col){
+		
+		Split ();
+		Destroy (gameObject);
+		
 	}
 }
